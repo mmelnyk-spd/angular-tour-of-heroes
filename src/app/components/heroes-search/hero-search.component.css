@@ -1,0 +1,32 @@
+label {
+  display: inline-block;
+  margin: 0 .5rem 0 0;
+}
+
+.search {
+  display: inline-block;
+
+  position: relative;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  background-color: white;
+}
+.search-result {
+  border-bottom: 1px solid gray;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#search-box{
+  min-width: 200px;
+  height: 20px;
+  padding: 3px;
+  border: 1px solid lightgray;
+}

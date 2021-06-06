@@ -9,11 +9,11 @@ import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HeroService } from './hero.service';
-import { DashboardComponent } from './dashboard.component';
-import { HeroesComponent } from './heroes.component';
-import { HeroDetailComponent } from './hero-detail.component';
-import { HeroSearchComponent } from './hero-search.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './heroes/hero-detail.component';
+import { NationJsHeroesComponent } from './nation-js-heroes/nation-js-heroes.component';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { TopBarModule } from './layout/top-bar/top-bar.module';
 
 @NgModule({
   imports: [
@@ -25,16 +25,16 @@ import { HeroSearchComponent } from './hero-search.component';
       dataEncapsulation: false,
       delay: 300,
       passThruUnknownUrl: true
-    })
+    }),
+    DashboardModule,
+    TopBarModule
   ],
   declarations: [
     AppComponent,
-    DashboardComponent,
-    HeroSearchComponent,
     HeroesComponent,
     HeroDetailComponent,
+    NationJsHeroesComponent,
   ],
-  providers: [HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

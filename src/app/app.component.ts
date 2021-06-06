@@ -3,8 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'my-root',
   template: `
-    <h1>{{title}}</h1>
-    <div class="header-bar"></div>
+    <div class="header-wrap">
+      <h1>{{title}}</h1>
+      <my-top-bar></my-top-bar>
+    </div>
     <nav>
       <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
       <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
